@@ -1,5 +1,7 @@
 package homework;
 
+import org.w3c.dom.ls.LSOutput;
+
 public class FigurePainter2 {
 
     public static void main(String[] args) {
@@ -22,7 +24,7 @@ public class FigurePainter2 {
             System.out.println();
         }
 
-
+        System.out.println();
         // Figure2
 
         for (int i = 0; i < 5; i++) {
