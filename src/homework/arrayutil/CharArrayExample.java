@@ -19,7 +19,7 @@ public class CharArrayExample {
 
         char[] chars2 = {'j', 'a', 'v', 'a', 'l', 'o', 'v', 'e',};
         int x = chars2.length;
-        System.out.print((chars2[(x / 2) -1]) + " " + chars2[x / 2]);
+        System.out.print((chars2[(x / 2) - 1]) + " " + chars2[x / 2]);
 
 
         System.out.println();
