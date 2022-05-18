@@ -14,10 +14,10 @@ public class ArrayUtil {
         System.out.println();
 
 
-//        Տպեք մասիվի ամենամեծ թիվը,
+        System.out.println("տպել ամենամեծ էլեմենտը");
 
         int max = array[0];
-        for (int i = 0; i < array.length; i++) {
+        for (int i = 1; i < array.length; i++) {
             if (array[i] > max) {
                 max = array[i];
             }
@@ -25,10 +25,10 @@ public class ArrayUtil {
         System.out.println("max=" + max);
 
 
-//        Տպեք մասիվի ամենափոքրը թիվը,
+        System.out.println("տպել ամենափոքր էլեմենտը");
 
         int min = array[0];
-        for (int i = 0; i < array.length; i++) {
+        for (int i = 1; i < array.length; i++) {
             if (array[i] < min) {
                 min = array[i];
             }
@@ -36,7 +36,7 @@ public class ArrayUtil {
         System.out.println("min=" + min);
 
 
-//        Տպեք մասիվի բոլոր զույգ էլեմենտները,
+        System.out.println("Տպեք մասիվի բոլոր զույգ էլեմենտները");
 
 
         for (int i = 0; i < array.length; i++) {
@@ -46,9 +46,8 @@ public class ArrayUtil {
             }
         }
 
-        System.out.println();
 
-//                Տպեք մասիվի բոլոր կենտ էլեմենտները։
+        System.out.println("Տպեք մասիվի բոլոր կենտ էլեմենտները");
 
 
         for (int i = 0; i < array.length; i++) {
@@ -60,25 +59,25 @@ public class ArrayUtil {
 
         System.out.println();
 
-//        Տպեք զույգերի քանակը։
+        System.out.println("Տպեք մասիվի զույգ էլեմենտների քանակը");
 
         int evenCount = 0;
         for (int i = 0; i < array.length; i++) {
             int evenNum = array[i] % 2;
             if (evenNum == 0) {
-                evenCount = evenCount + 1;
+                evenCount++;
             }
         }
         System.out.println("evenCount=" + evenCount);
 
 
-//        Տպեք կենտերի քանակը
+        System.out.println("Տպեք մասիվի կենտ էլեմենտների քանակը");
 
         int oddIndex = 0;
         for (int i = 0; i < array.length; i++) {
             int oddNum = array[i] % 2;
             if (oddNum != 0) {
-                oddIndex = oddIndex + 1;
+                oddIndex++;
             }
         }
         System.out.println("oddCount=" + oddIndex);
@@ -87,13 +86,15 @@ public class ArrayUtil {
 
 //        Տպեք մասիվի էլեմենտների գումարը։
 
-        
+
         int sum = 0;
         for (int i = 0; i < array.length; i++) {
             sum = sum + array[i];
         }
-        System.out.println("avg=" + sum / array.length);
-        System.out.println("sum=" + sum);
+        System.out.println("էլեմենտների գումարը->>" + sum);
+        double avg = sum / array.length;
+        System.out.println("միջին թվաբանականը->>" + avg);
+
 
     }
 }

@@ -1,9 +1,9 @@
 package classwork.lesson6;
 
-public class ArrayExamole {
+public class ArrayExample {
     public static void main(String[] args) {
 //        int[] numbers = new int[7];
-        int[] numbers = {87, 55, 21, -7, 0};
+        int[] numbers = {87, 55, 21, -7, 5};
 
         int lastIndex = numbers.length - 1;
         System.out.println(numbers[lastIndex]);
