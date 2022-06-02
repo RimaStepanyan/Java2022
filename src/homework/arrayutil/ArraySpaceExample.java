@@ -14,11 +14,10 @@ public class ArraySpaceExample {
         char[] result = new char[(endIndex - beginIndex) + 1];
         int index = 0;
         for (int i = beginIndex; i < endIndex+1; i++) {
-            result[index] = spaceArray[i];
-            index++;
+            result[index++] = spaceArray[i];
         }
-        for (int i = 0; i < result.length; i++) {
-            System.out.print(result[i]);
+        for (char c : result) {
+            System.out.print(c);
         }
 
     }

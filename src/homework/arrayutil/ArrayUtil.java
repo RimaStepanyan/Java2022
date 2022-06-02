@@ -1,100 +1,99 @@
 package homework.arrayutil;
 
-public class ArrayUtil {
-    public static void main(String[] args) {
+public class ArrayUtil<re> {
 
-        int[] array = {2, 5, 8, 10, 32, 22, 11, 66, 12, 30};
-
-//        Տպեք մասիվի բոլոր էլեմենտները,
-
-        for (int i = 0; i < array.length; i++) {
-            System.out.print(array[i] + " ");
-        }
-
-        System.out.println();
-
-
-        System.out.println("տպել ամենամեծ էլեմենտը");
-
+    int max(int[] array) {
         int max = array[0];
         for (int i = 1; i < array.length; i++) {
             if (array[i] > max) {
                 max = array[i];
             }
         }
-        System.out.println("max=" + max);
+        return max;
+    }
 
-
-        System.out.println("տպել ամենափոքր էլեմենտը");
-
+    int min(int[] array) {
         int min = array[0];
         for (int i = 1; i < array.length; i++) {
             if (array[i] < min) {
                 min = array[i];
             }
         }
-        System.out.println("min=" + min);
+        return min;
+    }
 
 
-        System.out.println("Տպեք մասիվի բոլոր զույգ էլեմենտները");
-
-
+    // զույգեր
+    int even(int[] array) {
+        int evensCount = 0;
         for (int i = 0; i < array.length; i++) {
-            int evenNum = array[i] % 2;
-            if (evenNum == 0) {
-                System.out.print(array[i] + " ");
+            if (array[i] % 2 == 0) {
+                evensCount++;
             }
         }
+        return evensCount;
+    }
 
-
-        System.out.println("Տպեք մասիվի բոլոր կենտ էլեմենտները");
-
-
+    // կենտ
+    int odd(int[] array) {
+        int oddsCount = 0;
         for (int i = 0; i < array.length; i++) {
-            int oddNum = array[i] % 2;
-            if (oddNum != 0) {
-                System.out.print(array[i] + " ");
+            if (array[i] % 2 != 0) {
+                oddsCount++;
             }
         }
+        return oddsCount;
+    }
 
-        System.out.println();
-
-        System.out.println("Տպեք մասիվի զույգ էլեմենտների քանակը");
-
-        int evenCount = 0;
-        for (int i = 0; i < array.length; i++) {
-            int evenNum = array[i] % 2;
-            if (evenNum == 0) {
-                evenCount++;
-            }
-        }
-        System.out.println("evenCount=" + evenCount);
-
-
-        System.out.println("Տպեք մասիվի կենտ էլեմենտների քանակը");
-
-        int oddIndex = 0;
-        for (int i = 0; i < array.length; i++) {
-            int oddNum = array[i] % 2;
-            if (oddNum != 0) {
-                oddIndex++;
-            }
-        }
-        System.out.println("oddCount=" + oddIndex);
-
-        //        Տպեք մասիվի բոլոր թվերի միջին թվաբանականը (բոլոր էլեմենտների գումարը / էլեմենտների քանակի վրա)
-
-//        Տպեք մասիվի էլեմենտների գումարը։
-
-
+    int sum(int[] array) {
         int sum = 0;
         for (int i = 0; i < array.length; i++) {
             sum = sum + array[i];
         }
-        System.out.println("էլեմենտների գումարը->>" + sum);
-        double avg = sum / array.length;
-        System.out.println("միջին թվաբանականը->>" + avg);
+        return sum;
+    }
 
+    double avg(int[] array) {
+        int sum = 0;
+        for (int i = 0; i < array.length; i++) {
+            sum = sum + array[i];
+        }
+        double avg = sum / array.length;
+        return avg;
+    }
+
+    void sortByMax(int[] array) {
+
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 1; j < array.length - i; j++) {
+                if (array[j] < array[j - 1]) {
+                    int temp = array[j];
+                    array[j] = array[j - 1];
+                    array[j - 1] = temp;
+                }
+            }
+        }
+
+        for (int number : array) {
+            System.out.print(number + " ");
+        }
 
     }
+
+    void sortByMin(int[] array) {
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 1; j < array.length; j++) {
+                if(array[j]>array[j-1]){
+                    int temp = array[j];
+                    array[j] = array[j-1];
+                    array[j-1] = temp;
+                }
+            }
+        }
+        for (int number : array) {
+            System.out.print(number + " ");
+        }
+    }
+
+
 }
