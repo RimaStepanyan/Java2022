@@ -1,6 +1,7 @@
 package homework.arrayutil;
 
-public class ArrayUtil<re> {
+public class ArrayUtil {
+
 
     int max(int[] array) {
         int max = array[0];
